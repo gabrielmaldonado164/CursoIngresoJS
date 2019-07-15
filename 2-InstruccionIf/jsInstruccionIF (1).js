@@ -8,7 +8,5 @@ if (15==edad)
 	alert("Nina Bonita");
 
 }
-	else{
-		alert("Error");
-	}
+	
 }//FIN DE LA FUNCIÓN
