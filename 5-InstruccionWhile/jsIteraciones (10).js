@@ -2,16 +2,40 @@ function mostrar()
 {
 
 	var contador=0;
+	var numero;
+	var numeroDos;
+	var suma;
+	alert(numero);
 	//declarar contadores y variables 
+	numeroDos = 12;
+	suma=numero*numeroDos;
+	alert(suma);
 	
-	var respuesta="si";
+	suma=3;//bien
+	suma="3";//bien
+	suma="lalala";//eror
+	
 
-	while(respuesta!="no")
+	while(isNaN(suma)||(suma<0)||(suma>10))
 	{
-		
-	
+		alert("error");
+		suma = prompt("error,reingrese numero");
 	}
+	alert("Ingreso correcto" + suma);
 
+	
+	//if(isNaN(suma))
+	//{
+		//alert("error");
+	//}
+	//else{
+		//alert("bien");
+	//}
+
+	//var respuesta="si";
+
+	//while(respuesta!="no")
+	
 
 
 
