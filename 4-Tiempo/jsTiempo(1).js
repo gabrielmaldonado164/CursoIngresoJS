@@ -11,5 +11,5 @@ function SegundosEnElAire() {
 
     alert("Bienvenido a la UTN FRA");
 
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}//FIN DE LA FUNCIÓN SegundosEnElAirer
 
