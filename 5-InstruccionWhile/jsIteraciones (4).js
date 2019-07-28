@@ -3,11 +3,12 @@ function mostrar()
 
 	var numero = prompt("ingrese un número entre 0 y 10.");
 
-	while(numero<0 || numero > 10) //while(numero>0 && numero<10) esta seria la manera de pensarlo correcto, pero en while siempre es buscar el error.
+	while(!(numero>0 && numero<10)) //while(numero<0 || numero<10), esta seria la otra forma de hacerlo tambien
+	//otra manera de hacerlo seria negarlo, osea pensarlo de la forma habitual y despues negarlo.
 	{
 		numero = prompt("Error, intentelo de nuevo");
 	}
-		console.log("Correcto");
+	console.log("Correcto");
     
 
 
