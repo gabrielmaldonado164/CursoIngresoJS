@@ -1,12 +1,11 @@
 function mostrar()
 {
-
 	var contador=0;
 	var acumulador=0;
-	var respuesta='s';
+	var respuesta='si';
 	var numero;
 
-	while(respuesta!='n')
+	while(respuesta!='no')
 	{
 		contador++;
 		numero = prompt("Numero nuevo");
