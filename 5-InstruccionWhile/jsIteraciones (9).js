@@ -40,4 +40,6 @@ function mostrar()
 
 	document.getElementById("maximo").value=maximo;
 	document.getElementById("minimo").value=minimo;
+
+	//S
 }//FIN DE LA FUNCIÓN

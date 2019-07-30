@@ -61,4 +61,6 @@ function mostrar()
 	console.log("La cantidad de negativos es: " + cantidadNegativo );
 	console.log("La cantidad par es: " + cantidadPar);
 
+	//s
+
 }//FIN DE LA FUNCIÓN
