@@ -1,42 +1,64 @@
 function mostrar()
 {
-
-	var contador=0;
+	var sumaPositivo=0;
+	var sumaNegativo=0;
+	var cantidadPositivo =0;
+	var cantidadNegativo =0;
+	var cantidadCeros=0;
+	var cantidadPar=0;
+	var promedioPositivo=0;
+	var promedioNegativo=0;
+	var contador = 0;
+	var respuesta = 's';
 	var numero;
-	var numeroDos;
-	var suma;
-	alert(numero);
-	//declarar contadores y variables 
-	numeroDos = 12;
-	suma=numero*numeroDos;
-	alert(suma);
-	
-	suma=3;//bien
-	suma="3";//bien
-	suma="lalala";//eror
-	
-
-	while(isNaN(suma)||(suma<0)||(suma>10))
+	var diferencia=0;
+	do
 	{
-		alert("error");
-		suma = prompt("error,reingrese numero");
-	}
-	alert("Ingreso correcto" + suma);
+		numero = parseInt(prompt("Ingrese un numero"));
+		while(isNaN(numero))
+		{
+			alert("Eso no es un numero, ingrese nuevamente un dato");
+			numero = parseInt(prompt("Ingrese un numero"));
+		}
+		
+		if(numero == 0)
+		{
+			cantidadCeros++; //esto es para que cuente cuantos 0 hay
+		}
+		if(numero > 0)
+		{
+			sumaPositivo = sumaPositivo + numero; // mediante este if veo si es positivo o negativo
+			cantidadPositivo++;
+		}
+		else
+		{
+			sumaNegativo = sumaNegativo + numero;
+			cantidadNegativo++;
+		}
+		if(numero%2 == 0) //con esto lo que hago es saber si es par, 
+		{
+			cantidadPar++;
+		}
 
-	
-	//if(isNaN(suma))
-	//{
-		//alert("error");
-	//}
-	//else{
-		//alert("bien");
-	//}
+		respuesta = prompt("Desea continuar?");
+		contador++;
 
-	//var respuesta="si";
-
-	//while(respuesta!="no")
-	
+	}while(respuesta != 'n');
 
 
+	promedioPositivo = sumaPositivo / cantidadPositivo;
+	promedioNegativo = sumaNegativo / cantidadNegativo;
+	diferencia = sumaPositivo + sumaNegativo;
+
+
+	console.log("El promedio positivo es: " + promedioPositivo);
+	console.log("El promedio negativo es :" + promedioNegativo);
+	console.log("La diferencia es: " + diferencia);
+	console.log("La suma de positivos es: " + sumaPositivo);
+	console.log("La suma de negativos: " + sumaNegativo);
+	console.log("La cantidad de ceros es: " + cantidadCeros);
+	console.log("La cantidad de positivos es: " + cantidadPositivo);
+	console.log("La cantidad de negativos es: " + cantidadNegativo );
+	console.log("La cantidad par es: " + cantidadPar);
 
 }//FIN DE LA FUNCIÓN
