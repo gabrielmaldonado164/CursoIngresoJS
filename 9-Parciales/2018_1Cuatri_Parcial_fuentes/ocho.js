@@ -51,27 +51,28 @@ function mostrar()
         }
         else
         {  
-           if(numero %2==1 || numero ==-1)
+            if(numero %2==1 || numero ==-1)
             {
-               cantidadImpares++;
-               
+                cantidadImpares++;
+                
             }
-
+            
             if(numero == 0)
             {
                 cantidadCeros++;
             }
+        }
 
-            if(numero >0)
-            {
-                sumaPositivos = sumaPositivos + numero;
-                contadorPositivo++;
-            }
-            else
-            {
-                sumaNegativos = sumaNegativos + numero;
-                contadorNegativo;
-            }
+       if(numero >0)
+        {
+            sumaPositivos = sumaPositivos + numero;
+            contadorPositivo++;
+        }
+        else
+        {
+            sumaNegativos = sumaNegativos + numero;
+            contadorNegativo;
+        }
             
             if(numero == 0)
             {
@@ -93,8 +94,7 @@ function mostrar()
                 letraMIninimo = letra;
             }
 
-            respuesta = prompt("Quiere continuar: s/n");
-        }
+         respuesta = prompt("Quiere continuar: s/n");
  
 
     }while(respuesta == 's');
