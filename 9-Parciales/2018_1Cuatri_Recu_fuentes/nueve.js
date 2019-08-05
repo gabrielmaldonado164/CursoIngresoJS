@@ -10,14 +10,20 @@ function mostrar()
     var flag;
     var pesoMaximo;
     var pesoMinimo;
+    var promedioProductos;
+    var acumuladorProductos;
+    var contador;
 
    
     
-    seguir = 'f';
+    seguir = 's';
     contadorTemperaturaPares = 0;
     cantidadTemperaturaMenosCero = 0;
     banderaProducto = 0;
     flag = 0;
+    acumuladorProductos = 0;
+    contador = 0;
+
 
 
     do
@@ -58,21 +64,44 @@ function mostrar()
         if( flag == 0)
         {
             pesoMaximo = pesoProducto;
-            pesoMinimo = pesoProducto
+            pesoMinimo = pesoProducto;
             marcaPesado = marcaProducto;
+        }
+        
+        if(pesoProducto>pesoMaximo)
+        {
+        	pesoMaximo = pesoProducto;
+        	marcaPesado = marcaProducto;
+        }
+
+        if(pesoProducto<pesoMinimo)
+        {
+        	pesoMinimo = pesoProducto;
         }
 
 
-        
+        if(temperaturaProducto <  0)
+        {
+        	cantidadTemperaturaMenosCero++;
+        }
 
 
+        contador++;
+        flag++;
 
+        acumuladorProductos = acumuladorProductos + pesoProducto;
+        promedioProductos = acumuladorProductos / contador;
 
         seguir = prompt("Desea continuar? s/n");
 
 
-    }while(seguir == 'f')
+    }while(seguir =='s');
 
     console.log("Contador pares " + contadorTemperaturaPares);
-}   
+    console.log("Marca del producto mas pesado es: " + marcaPesado);
+    console.log("Cantidad de productos menores a 0 grados: " +  cantidadTemperaturaMenosCero);
+    console.log("El promedio de los productos es: "  + promedioProductos);
+    console.log("El peso maximo es: " + pesoMaximo);
+    console.log("El peso minimo es: " + pesoMinimo);
+}
 

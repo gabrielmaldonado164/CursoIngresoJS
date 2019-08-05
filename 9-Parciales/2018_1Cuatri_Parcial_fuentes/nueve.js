@@ -12,6 +12,7 @@ function mostrar()
     var pesoMaximo;
     var pesoMinimo;
     var siguiente;
+    var bandera;
 
     temperaturaProducto = 0;
     cantidadTemperaturaPares = 0;
@@ -22,8 +23,7 @@ function mostrar()
     pesoMaximo = 0;
     siguiente = 's';
     marcaProducto = 0;
-    pesoMinimo = 0;
-    pesoProducto = 0;
+    bandera = 0 ;
 
     do
     {
@@ -61,7 +61,7 @@ function mostrar()
             cantidadTemperaturaPares++;
         }
 
-        if(pesoProducto == 0)
+        if( bandera == 0)
         {
          pesoMaximo = pesoProducto;
          pesoMinimo = pesoProducto;
