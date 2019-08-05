@@ -1,28 +1,26 @@
 function mostrar()
 {
-    var dia;
-    var mensaje;
+   var dia;
+   var mensaje;
 
-    dia = prompt("Ingrese nombre");
-    mensaje = "No es un dia valido";
+   dia = prompt("Ingrese dia de la semana")
+   mensaje = "Dia no valido";
 
-    switch(dia)
-    {
-        case"sabado":
-        case"domingo":
+   switch(dia)
+   {
+       case"sabado":
+       case"domingo":
             mensaje = "Buen finde";
             break;
-        case"lunes":
-        case"martes":
-        case"miercoles":
-        case"jueves":
-        case"viernes":
-            mensaje = "a trabajar";
+       case"lunes":
+       case"martes":
+       case"miercoles":
+       case"jueves":
+       case"viernes":
+            mensaje = "A laburar";
             break;
-        default:
-            mensaje = "No es un dia valido";
-            break;
-    }
-    alert(mensaje);
-
+       default:
+           break;
+   }
+   alert(mensaje);
 }

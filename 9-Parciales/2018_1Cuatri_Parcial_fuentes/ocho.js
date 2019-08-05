@@ -99,5 +99,8 @@ function mostrar()
 
     }while(respuesta == 's');
 
+    console.log("sa" + numeroMaximo + " " + letraMaximo);
+    console.log("sda " + numeroMinimo + " " + letraMIninimo); 
+
 
 }
